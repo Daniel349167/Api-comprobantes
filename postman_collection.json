@@ -101,11 +101,11 @@
 							"formdata": [
 								{
 									"key": "email",
-									"value": "user@example.com"
+									"value": "{{email}}"
 								},
 								{
 									"key": "password",
-									"value": "password123"
+									"value": "{{password}}"
 								}
 							]
 						},
@@ -290,13 +290,12 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://{{url_base}}/user/articulo/:nombre/monto-total",
+							"raw": "http://{{url_base}}/articulo/:nombre/monto-total",
 							"protocol": "http",
 							"host": [
 								"{{url_base}}"
 							],
 							"path": [
-								"user",
 								"articulo",
 								":nombre",
 								"monto-total"
@@ -322,13 +321,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{url_base}}/user/comprobantes/monto/total",
+							"raw": "http://{{url_base}}/comprobantes/monto/total",
 							"protocol": "http",
 							"host": [
 								"{{url_base}}"
 							],
 							"path": [
-								"user",
 								"comprobantes",
 								"monto",
 								"total"
