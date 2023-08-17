@@ -1,9 +1,9 @@
 Pasos para correr mi aplicación:
 
--clonar el repositorio
--php artisan migrate
--php artisan db:seed
--php artisan serve
+- clonar el repositorio
+- php artisan migrate
+- php artisan db:seed
+- php artisan serve
 
 luego pueden probar las apis en postman importando el archivo postman_collection.json.
 
