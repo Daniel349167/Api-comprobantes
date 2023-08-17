@@ -125,8 +125,10 @@ class ComprobanteController extends Controller
         return response()->json(['mensaje' => 'Comprobante eliminado con éxito'], 200);
     }
 
-    public function getTotalAmountByArticle($userId, $nombreArticulo)
+    public function getTotalAmountByArticle($nombreArticulo)
     {
+        $user = auth()->user();
+        $userId = $user->id;
         // Obtener todos los comprobantes del usuario
         $comprobantes = Comprobante::where('user_id', $userId)->with('articulos')->get();
 
@@ -161,11 +163,12 @@ class ComprobanteController extends Controller
     }
 
 
-    public function getTotalAmount($userId)
+    public function getTotalAmount()
     {
         // Obtener el nombre del usuario
-        $user = User::find($userId);
-
+        $user = auth()->user();
+        $userId = $user->id;
+        
         if (!$user) {
             return response()->json(['mensaje' => 'Usuario no encontrado'], 404);
         }
