@@ -31,8 +31,8 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('/comprobantes/{id}', [ComprobanteController::class, 'show']); // Obtener detalles de un comprobante específico
     Route::delete('/comprobantes/{id}', [ComprobanteController::class, 'destroy']); // Eliminar un comprobante
 
-    Route::get('/user/articulo/{nombreArticulo}/monto-total', [ComprobanteController::class, 'getTotalAmountByArticle']); // Monto total por artículo de un usuario en específico  
-    Route::get('/user/comprobantes/monto/total', [ComprobanteController::class, 'getTotalAmount']); // Monto total acumulado por todos los comprobantes de un usuario específico
+    Route::get('articulo/{nombreArticulo}/monto-total', [ComprobanteController::class, 'getTotalAmountByArticle']); // Monto total por artículo de un usuario en específico  
+    Route::get('comprobantes/monto/total', [ComprobanteController::class, 'getTotalAmount']); // Monto total acumulado por todos los comprobantes de un usuario específico
     
 
 });
