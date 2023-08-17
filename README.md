@@ -1,6 +1,7 @@
 Pasos para correr mi aplicación:
 
 - clonar el repositorio
+- modificar el archivo env, con los datos de la bd mysql y del correo
 - php artisan migrate
 - php artisan db:seed
 - php artisan serve
